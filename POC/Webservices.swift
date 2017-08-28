@@ -62,15 +62,15 @@ open class Webservices: NSObject {
         
     }
 
-    @discardableResult public func commaonApiCall(url: String, request : [String:Any], _ _closure:((NSError?,NSDictionary?) -> Void)? = nil) -> URLSessionDataTask {
+    @discardableResult public func commaonApiCall(url: String, jsonData : NSData, _ _closure:((NSError?,NSDictionary?) -> Void)? = nil) -> URLSessionDataTask {
         let urlString : String = url
         let url = URL(string: urlString)
-        let json : [String:Any] = request
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+       // let json : [String:Any] = request
+       // let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        request.httpBody = jsonData
+        request.httpBody = jsonData as Data
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("807415", forHTTPHeaderField: "appId")
         request.setValue("1492507516844", forHTTPHeaderField: "timestamp")
