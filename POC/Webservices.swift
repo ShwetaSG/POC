@@ -62,9 +62,20 @@ open class Webservices: NSObject {
         
     }
 
-    @discardableResult public func commaonApiCall(url: String, jsonData : NSData, _ _closure:((NSError?,NSDictionary?) -> Void)? = nil) -> URLSessionDataTask {
+    @discardableResult public func commaonApiCall(url: String, jsonData : NSData, appId :String, _ _closure:((NSError?,NSDictionary?) -> Void)? = nil) -> URLSessionDataTask {
         let urlString : String = url
         let url = URL(string: urlString)
+        let appid = "807415"
+        
+        var travelAgent = PCTravelAgentFloatService(fromDictionary: "json:value")
+        travelAgent.intAgentFloatIO.proposalNum = "4120000161814"
+        
+        
+        
+        
+        
+        
+        
        // let json : [String:Any] = request
        // let jsonData = try? JSONSerialization.data(withJSONObject: json)
         
@@ -72,7 +83,7 @@ open class Webservices: NSObject {
         request.httpMethod = "POST"
         request.httpBody = jsonData as Data
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("807415", forHTTPHeaderField: "appId")
+        request.setValue(appid, forHTTPHeaderField: "appId")
         request.setValue("1492507516844", forHTTPHeaderField: "timestamp")
         request.setValue("lah+w6mfcl1rJEX0l4upNNVYUVS3EOWaOkhkVaiqRvk=", forHTTPHeaderField: "signature")
         let session = URLSession.shared

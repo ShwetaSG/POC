@@ -11,6 +11,11 @@
 		B87617421F4DA822008724DB /* POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87617411F4DA822008724DB /* POCTests.swift */; };
 		B87617441F4DA822008724DB /* POC.h in Headers */ = {isa = PBXBuildFile; fileRef = B87617361F4DA822008724DB /* POC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B87617501F4DA979008724DB /* Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B876174F1F4DA979008724DB /* Webservices.swift */; };
+		B8D56F9C1F5FED1A00A5413D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D56F9B1F5FED1A00A5413D /* Constant.swift */; };
+		B8D56FAD1F5FF91C00A5413D /* IntAgentFloatIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D56FAB1F5FF91C00A5413D /* IntAgentFloatIO.swift */; };
+		B8D56FAE1F5FF91C00A5413D /* TravelAgentFloatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D56FAC1F5FF91C00A5413D /* TravelAgentFloatService.swift */; };
+		B8D56FB11F60002400A5413D /* PCTravelAgentFloatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D56FAF1F60002400A5413D /* PCTravelAgentFloatService.swift */; };
+		B8D56FB21F60002400A5413D /* PCIntAgentFloatIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D56FB01F60002400A5413D /* PCIntAgentFloatIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,11 @@
 		B87617411F4DA822008724DB /* POCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCTests.swift; sourceTree = "<group>"; };
 		B87617431F4DA822008724DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B876174F1F4DA979008724DB /* Webservices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservices.swift; sourceTree = "<group>"; };
+		B8D56F9B1F5FED1A00A5413D /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B8D56FAB1F5FF91C00A5413D /* IntAgentFloatIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntAgentFloatIO.swift; sourceTree = "<group>"; };
+		B8D56FAC1F5FF91C00A5413D /* TravelAgentFloatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelAgentFloatService.swift; sourceTree = "<group>"; };
+		B8D56FAF1F60002400A5413D /* PCTravelAgentFloatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCTravelAgentFloatService.swift; sourceTree = "<group>"; };
+		B8D56FB01F60002400A5413D /* PCIntAgentFloatIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCIntAgentFloatIO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +83,11 @@
 		B87617351F4DA822008724DB /* POC */ = {
 			isa = PBXGroup;
 			children = (
+				B8D56F9D1F5FF32800A5413D /* Models */,
 				B876174F1F4DA979008724DB /* Webservices.swift */,
 				B87617361F4DA822008724DB /* POC.h */,
 				B87617371F4DA822008724DB /* Info.plist */,
+				B8D56F9B1F5FED1A00A5413D /* Constant.swift */,
 			);
 			path = POC;
 			sourceTree = "<group>";
@@ -87,6 +99,25 @@
 				B87617431F4DA822008724DB /* Info.plist */,
 			);
 			path = POCTests;
+			sourceTree = "<group>";
+		};
+		B8D56F9D1F5FF32800A5413D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8D56F9E1F5FF35400A5413D /* TravelAgentFloatService */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B8D56F9E1F5FF35400A5413D /* TravelAgentFloatService */ = {
+			isa = PBXGroup;
+			children = (
+				B8D56FAC1F5FF91C00A5413D /* TravelAgentFloatService.swift */,
+				B8D56FAB1F5FF91C00A5413D /* IntAgentFloatIO.swift */,
+				B8D56FAF1F60002400A5413D /* PCTravelAgentFloatService.swift */,
+				B8D56FB01F60002400A5413D /* PCIntAgentFloatIO.swift */,
+			);
+			name = TravelAgentFloatService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D56FAE1F5FF91C00A5413D /* TravelAgentFloatService.swift in Sources */,
+				B8D56FB21F60002400A5413D /* PCIntAgentFloatIO.swift in Sources */,
+				B8D56FB11F60002400A5413D /* PCTravelAgentFloatService.swift in Sources */,
 				B87617501F4DA979008724DB /* Webservices.swift in Sources */,
+				B8D56FAD1F5FF91C00A5413D /* IntAgentFloatIO.swift in Sources */,
+				B8D56F9C1F5FED1A00A5413D /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +442,7 @@
 				B87617491F4DA822008724DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B876174A1F4DA822008724DB /* Build configuration list for PBXNativeTarget "POCTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +451,7 @@
 				B876174C1F4DA822008724DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
